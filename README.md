@@ -40,7 +40,9 @@ export default function Cardapio() {
 
 > Esse recurso transforma um SVG em um componente React, esse pacote, SVGR,  já vem junto com o creat 
 
-# Para resolver o bug que é importar SVG
+- Importante! Para o webPack possa entender um caminho, que é em forma de string, de um arquivo estático, basta    importar esse arquivo, que no caso deste exemplo é um SVG
+
+# Para resolver o bug ao importar SVG
 
 > Basta usar a configuração no arquivo `Global.d.ts`
 > Site de referência :
@@ -57,6 +59,16 @@ declare module "*.svg" {
   export default src;
 }
 ```
+
+# Adicionando o normalize no projeto
+
+> Link de referência para a configuração
+> `https://create-react-app.dev/docs/adding-css-reset`
+
+> Esse recurso reseta todo css do projeto.
+
+> Outra maneira de se utilizar e fazendo a instalação com o comando `npm install normalize.css`
+> em seguida importando no `index.tsx`
 
 
 
