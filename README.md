@@ -38,6 +38,25 @@ export default function Cardapio() {
 
 # usando um SVG como um componente com o pacote SGVR
 
-> Esse recurso transforma um SVG em um componente React
+> Esse recurso transforma um SVG em um componente React, esse pacote, SVGR,  já vem junto com o creat 
+
+# Para resolver o bug que é importar SVG
+
+> Basta usar a configuração no arquivo `Global.d.ts`
+> Site de referência :
+`https://webpack.js.org/guides/typescript/#importing-other-assets`
+
+> Site de referência :
+`https://stackoverflow.com/questions/54121536/typescript-module-svg-has-no-exported-member-reactcomponent`
+
+```
+declare module "*.svg" {
+  import React = require('react');
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
+}
+```
+
 
 
