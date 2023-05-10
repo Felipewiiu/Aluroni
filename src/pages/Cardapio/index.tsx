@@ -6,6 +6,7 @@ import { useState } from "react"
 
 export default function Cardapio() {
   const [busca, setBusca] = useState("")
+  console.log(busca)
 
   return (
     <main>
