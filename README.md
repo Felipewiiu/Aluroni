@@ -70,5 +70,8 @@ declare module "*.svg" {
 > Outra maneira de se utilizar e fazendo a instalação com o comando `npm install normalize.css`
 > em seguida importando no `index.tsx`
 
+# Importando um pacote de ícones
 
+> Para fazer a instalação da biblioteca é necessário digitar o comando `npm install react-icons`
+> link da biblioteca: `https://react-icons.github.io/react-icons/icons?name=gr`
 
