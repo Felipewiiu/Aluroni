@@ -1,6 +1,7 @@
 import React from 'react'
 import filtros from './filtros.json'
 import styles from './Filtros.module.scss'
+import classNames from 'classnames'
 
 type Iopcao = typeof filtros[0] // esse é mais um exemplo de se criar uma interface que auto se ajusta em relação a tipos
 
@@ -21,8 +22,10 @@ export default function Filtros({ filtro, setFiltro }: Props) {
     <div className={styles.filtros}>
       {filtros.map((opcao) => (
         <button
-          className={`
-          ${styles.filtros__filtro} ${filtro == opcao.id ? styles['filtros__filtro--ativo'] : ""}`}
+          className={classNames({
+            [styles.filtros__filtro]: true,
+            [styles['filtros__filtro--ativo']]: filtro === opcao.id
+          })}
           key={opcao.id}
           onClick={() => selecionarFiltro(opcao)} >
           {opcao.label}

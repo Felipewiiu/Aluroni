@@ -76,14 +76,18 @@ declare module "*.svg" {
 > link da biblioteca: `https://react-icons.github.io/react-icons/icons?name=gr`
 
 
-## Exemplo de renderização condicional
+# Exemplo de renderização condicional
 
 > Renderização condicional é o recurso que se pode alterar um estado baseado em uma condição. Observe o exemplo:
 
 ```
    ${styles.filtros__filtro} ${filtro == opcao.id ? styles['filtros__filtro--ativo'] : ""}`}
-```
 
+```
+# Colocando classes condicionais com o pacote classNames
+
+> Para a instalação deste pacote, devemos usar o comando `npm install classname`
+> Éssa biblioteca é um utilitário javascript, que serve para unir classNames condicionalmente
 
 
 
