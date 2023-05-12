@@ -89,5 +89,8 @@ declare module "*.svg" {
 > Para a instalação deste pacote, devemos usar o comando `npm install classname`
 > Éssa biblioteca é um utilitário javascript, que serve para unir classNames condicionalmente
 
+> Link de apoio: 
+`https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#objetos_e_propriedades`
+
 
 
