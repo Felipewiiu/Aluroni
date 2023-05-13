@@ -92,5 +92,31 @@ declare module "*.svg" {
 > Link de apoio: 
 `https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#objetos_e_propriedades`
 
+# Criando o regex para a função testaBusca()
+
+> Notas: o parametro `'i'` dentro de RegExp serve para colocar a regex insensível a letras maiúsculas e minúsculas
+
+
+```
+  function testaBusca(title: string){
+    const regex = new RegExp(busca, 'i')
+    return regex.test(title)
+  }
+```
+> OBS: Esse trecho de código se encontra dentro do componente <Item/>
+
+# Usando o contrutor RegExp 
+
+> Há dois modos de criar um objeto RegExp: uma notação literal e um construtor.
+
+```
+/ab+c/i;
+new RegExp('ab+c', 'i');
+```
+> OBS: Use a função construtora quando você sabe que o padrão da expressão regular será mudado, ou você não sabe o > padrão e o está recebendo de outra fonte, como uma entrada do usuário.
+
+
+
+
 
 
