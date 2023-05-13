@@ -1,4 +1,4 @@
-# Alurone
+# Aluroni
 
 <img src="capaAlurone.png" alt="Imagem do Aluroni" width="100%">
 
