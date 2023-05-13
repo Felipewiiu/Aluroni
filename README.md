@@ -1,6 +1,6 @@
 # Alurone
 
-<img src="capaAlurone.png" alt="Imagem do Aluroni" width="50%">
+<img src="capaAlurone.png" alt="Imagem do Aluroni" width="100%">
 
 
 # Getting Started with Create React App
