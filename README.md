@@ -1,3 +1,8 @@
+# Alurone
+
+<img src="capaAlurone.png" alt="Imagem do Aluroni" width="50%">
+
+
 # Getting Started with Create React App
 
 > Para criar um projeto em React js com o typescript pré configurado use:
