@@ -1,7 +1,7 @@
-import React from 'react'
-import filtros from './filtros.json'
-import styles from './Filtros.module.scss'
-import classNames from 'classnames'
+import React from 'react';
+import filtros from './filtros.json';
+import styles from './Filtros.module.scss';
+import classNames from 'classnames';
 
 type Iopcao = typeof filtros[0] // esse é mais um exemplo de se criar uma interface que auto se ajusta em relação a tipos
 
@@ -14,8 +14,8 @@ interface Props {
 export default function Filtros({ filtro, setFiltro }: Props) {
 
   function selecionarFiltro(opcao: Iopcao) {
-    if (filtro === opcao.id) return setFiltro(null)
-    return setFiltro(opcao.id)
+    if (filtro === opcao.id) return setFiltro(null);
+    return setFiltro(opcao.id);
   }
 
   return (
@@ -32,5 +32,5 @@ export default function Filtros({ filtro, setFiltro }: Props) {
         </button>
       ))}
     </div>
-  )
+  );
 }

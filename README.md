@@ -1,6 +1,6 @@
 # Alurone
 
-<img src="capaAlurone.png" alt="Imagem do Aluroni" width="50%">
+<img src="capaAlurone.png" alt="Imagem do Aluroni" width="100%">
 
 
 # Getting Started with Create React App
@@ -119,6 +119,17 @@ declare module "*.svg" {
 new RegExp('ab+c', 'i');
 ```
 > OBS: Use a função construtora quando você sabe que o padrão da expressão regular será mudado, ou você não sabe o > padrão e o está recebendo de outra fonte, como uma entrada do usuário.
+
+
+# instalando o Eslint no projeto
+
+> Primeiro passo é fazer a instalação com o seguinte comando: `npm init @eslint/config`
+> Responda as perguntas referente a configuração do projeto e prossiga com a instalação
+> Depois basta executar o Eslint com o comando: ` npx. eslint ./src --fix` para aplicar as correções
+
+> Nota: Quando aparecer o error, `'React' must be in scope when using JSX react/react-in-jsx-scope`,
+> basta mudar a regra dentro do arquivo `.eslintre.json` 
+> incluindo mas um atributo `"react/react-in-jsx-scope": "off"`
 
 
 
