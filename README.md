@@ -125,11 +125,22 @@ new RegExp('ab+c', 'i');
 
 > Primeiro passo é fazer a instalação com o seguinte comando: `npm init @eslint/config`
 > Responda as perguntas referente a configuração do projeto e prossiga com a instalação
-> Depois basta executar o Eslint com o comando: ` npx. eslint ./src --fix` para aplicar as correções
+> Depois basta executar o Eslint com o comando: ` npx eslint ./src --fix` para aplicar as correções
 
 > Nota: Quando aparecer o error, `'React' must be in scope when using JSX react/react-in-jsx-scope`,
 > basta mudar a regra dentro do arquivo `.eslintre.json` 
 > incluindo mas um atributo `"react/react-in-jsx-scope": "off"`
+
+
+# Instalando a biblioteca react-router-dom
+
+> O react-router-dom é uma biblioteca JavaScript utilizada no desenvolvimento de aplicativos web com React. Ela é > uma extensão da biblioteca de roteamento React Router, que permite a criação de aplicativos de página única
+> (SPA) com rotas e navegação entre diferentes componentes.
+
+- Instalação:
+
+> Ultilize o seguinte comando `npm install react-router-dom`
+
 
 
 
