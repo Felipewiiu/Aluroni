@@ -141,6 +141,34 @@ new RegExp('ab+c', 'i');
 
 > Ultilize o seguinte comando `npm install react-router-dom`
 
+# Histórico de navegação do react-router-dom
+
+> O react-router-dom, em relação ao histórico de navegação, ele funciona como uma estrutura de pilha.
+> antes da versão 6 dessa biblioteca, existia um hook que se chamava `useHistory`, que consegui manipular 
+> essa pilha de histórico, mas depois da versão 5 ele foi substituido pelo `useNavigate`
+> Para a manipulação dessa pilha de hitórico basta usar hook e passar como parâmetro uma string ou number
+
+Exemplo:
+
+```
+export default function NotFound() {
+  const navigate = useNavigate();
+  return (
+    <div className={classNames({
+      [styles.container]: true,
+      [stylesTema.container]: true
+    })}>
+      <div className={styles.voltar}>
+        <button onClick={() => navigate(-1)}>{'< Voltar'}</button>
+      </div>
+      <NotFoundImage/>
+    </div>
+  );
+}
+
+```
+
+
 
 
 

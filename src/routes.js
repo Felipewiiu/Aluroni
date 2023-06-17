@@ -17,8 +17,8 @@ export default function AppRouter() {
             <Route index element={<Inicio />} />
             <Route path='cardapio' element={<Cardapio />} />
             <Route path='sobre' element={<Sobre />} />
-            <Route path='*' element={<NotFound />} />
           </Route>
+          <Route path='*' element={<NotFound />} />
 
         </Routes>
         <Footer />
