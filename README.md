@@ -191,8 +191,9 @@ navigate(`/prato/${prato.id}`, {state: {...prato}});
 
 # Sobre o react-router-dom DICA!
 
-> É possivel color mais de um `Routes` no projeto. Segue o exemplo do componente prato que possui ele dentro de 
-> sua construção
+> É possivel colocar mais de um `Routes` no projeto. Segue o exemplo do componente prato que possui um 
+> `Routes` dentro de sua construção
+
 
 ```
 export default function Prato() {
