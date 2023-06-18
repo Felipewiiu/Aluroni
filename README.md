@@ -167,6 +167,71 @@ export default function NotFound() {
 }
 
 ```
+> Nota: o `useNavigate` aceita mais de um argumento, como  o `state` e o `replace` por exemplo
+
+Demonstração -- 
+
+```
+navigate(`/prato/${prato.id}`, {state: {...prato}});
+
+```
+
+
+# Hook useLocation
+
+> O useLocation é um hook fornecido pelo pacote react-router-dom, que é uma biblioteca popular para gerenciamento > de rotas no React. O hook useLocation permite acessar e interagir com o objeto de localização (location) 
+> do navegador dentro de um componente.
+
+# useParams
+
+> O useParams é outro hook fornecido pelo pacote react-router-dom que permite acessar os parâmetros de rota        > definidos em uma determinada rota.
+> Quando você define uma rota com parâmetros no React Router, como por exemplo `/users/:id`, o useParams permite
+> que você acesse o valor do parâmetro id dentro do componente.
+
+
+# Sobre o react-router-dom DICA!
+
+> É possivel color mais de um `Routes` no projeto. Segue o exemplo do componente prato que possui ele dentro de 
+> sua construção
+
+```
+export default function Prato() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const prato = Cardapio.find(item => item.id === Number(id));
+  if (!prato) {
+    navigate('*');
+    return <NotFound />;
+  }
+  return (
+    <Routes>
+      <Route path='*' element={<PaginaPadrao />}>
+        <Route index element={
+          <section className={styles.container}>
+            <button onClick={() => navigate(-1)} className={styles.voltar} >
+              {'< Voltar'}
+            </button>
+            <h1 className={styles.titulo}>
+              {prato.title}
+            </h1>
+            <div className={styles.imagem}>
+              <img src={prato.photo} alt={prato.title} />
+            </div>
+            <div className={styles.conteudo}>
+              <p className={styles.conteudo__descricao}>
+                {prato.description}
+              </p>
+              <TagsPrato {...prato} />
+            </div>
+          </section>
+        } />
+      </Route>
+    </Routes>
+  );
+}
+
+```
+
 
 
 

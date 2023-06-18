@@ -3,11 +3,18 @@ import cardapio from 'data/cardapio.json';
 import styles from './inicio.module.scss';
 import stylesTema from 'styles/Tema.module.scss';
 import nossaCasa from 'assets/nossa_casa.png';
+import { useNavigate } from 'react-router-dom';
+import { Prato } from 'types/Prato';
 
 export default function Inicio() {
-  let pratosRecomendados = [...cardapio];
+  const navigate = useNavigate();
 
+  let pratosRecomendados = [...cardapio];
   pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0,3);
+
+  function redirecionarParaDetalhes(prato: Prato){
+    navigate(`/prato/${prato.id}`, {state: {prato}}); // Aqui eu passo o estado como parâmetro
+  }
   return (
     <section>
       <h3 className={stylesTema.titulo}>
@@ -19,7 +26,10 @@ export default function Inicio() {
             <div className={styles.recomendado__imagem}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recomendado__botao}>
+            <button 
+              className={styles.recomendado__botao}
+              onClick={()=> redirecionarParaDetalhes(item)}
+            >
                   Ver mais
             </button>
           </div>
